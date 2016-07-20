@@ -17,7 +17,13 @@ return [
             'class' => 'izyue\admin\Module',
 //            'layout' => 'left-menu',
             'layout' => '@app/views/layouts/main.php',
-        ]
+        ],
+        'gii'=>[
+            'class'=>'yii\gii\Module',
+            //'password'=>'123456',
+            // If removed, Gii defaults to localhost only. Edit carefully to taste.
+            'allowedIPs' => ['127.0.0.1', '::1', '192.168.0.*', '192.168.178.20'] // 按需调整这里
+        ],
     ],
     'components' => [
         'user' => [
@@ -85,7 +91,10 @@ return [
         'allowActions' => [
             'debug/*',
             'site/*',
-//            'admin/*',
+            'gii/*',
+//            'admin/log/*',
+            'admin/*',
+            'lender/*',
             // The actions listed here will be allowed to everyone including guests.
             // So, 'admin/*' should not appear here in the production, of course.
             // But in the earlier stages of your development, you may probably want to

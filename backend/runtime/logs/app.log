@@ -1,0 +1,327 @@
+2016-07-20 12:33:43 [127.0.0.1][1][cpidml7ffc4uq80bigijmq15f5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/lendvest/index".' in F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('admin/lendvest/...', Array)
+#1 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2016-07-20 12:33:43 [127.0.0.1][1][cpidml7ffc4uq80bigijmq15f5][info][application] $_GET = [
+    'r' => 'admin/lendvest/index'
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '7339192320'
+    'productHistory' => '5c09e6feb89904e2c52b46f190760f6affae33a76d6d3a5f9827d5a29ae440ces:2:\"13\";'
+    '_csrf' => '0fe8a6dc5c55bfc6087f861eff5f265fc818489f9f10642a897cfc1bcc7a4cd6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DrHr78S2tgxXBGuNf1K_p-mBvFQD4nQU\";}'
+    'YII_CSRF_TOKEN' => '28e5f4649aca3e3753c3e30ddfbafd5e45c22635s:40:\"f287095aa09f23552064d08d623eb9d4cabe4f65\";'
+    'PHPSESSID' => 'cpidml7ffc4uq80bigijmq15f5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/projects/yii2admin/backend/web/index.php'
+    '__id' => 1
+    'mp-translate' => 'zh_cn'
+    'Yii.CCaptchaAction.a8a5be2d.site.captcha' => '68-8='
+    'Yii.CCaptchaAction.a8a5be2d.site.captcharesult' => 60
+    'Yii.CCaptchaAction.a8a5be2d.site.captchacount' => 1
+]
+
+$_SERVER = [
+    'TMP' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/binaries/tmp'
+    'HTTP_HOST' => 'www.wsq.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.wsq.com/projects/yii2admin/backend/web/index.php?r=admin%2Flendvest%2Fadmin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => 'pgv_pvi=7339192320; productHistory=5c09e6feb89904e2c52b46f190760f6affae33a76d6d3a5f9827d5a29ae440ces%3A2%3A%2213%22%3B; _csrf=0fe8a6dc5c55bfc6087f861eff5f265fc818489f9f10642a897cfc1bcc7a4cd6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DrHr78S2tgxXBGuNf1K_p-mBvFQD4nQU%22%3B%7D; YII_CSRF_TOKEN=28e5f4649aca3e3753c3e30ddfbafd5e45c22635s%3A40%3A%22f287095aa09f23552064d08d623eb9d4cabe4f65%22%3B; PHPSESSID=cpidml7ffc4uq80bigijmq15f5'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\easyphp\\EasyPHP-DevServer-14.1VC11\\binaries\\php\\php_runningversion;D:\\php\\EasyPHP-DevServer-13.1VC9\\binaries\\php\\php_runningversion;C:\\Program Files\\Broadcom\\Broadcom 802.11 Network Adapter\\Driver;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\小乌龟\\bin;C:;HashiCorp\\Vagrant\\bin;D:\\Program Files\\Oracle\\VirtualBox;D:\\Program Files\\Java\\jdk1.7.0_75\\bin;C:\\ProgramData\\ComposerSetup\\bin;F:\\王松青\\git\\cmd;C:\\Users\\gaocailong\\AppData\\Roaming\\Composer\\vendor\\bin;.;;F:\\easyphp\\EASYPH~1.1VC\\Apache\\bin;F:\\easyphp\\EASYPH~1.1VC\\PHP;.;;.;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) PHP/5.5.8'
+    'SERVER_NAME' => 'www.wsq.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb'
+    'SERVER_ADMIN' => 'admin@127.0.0.1'
+    'SCRIPT_FILENAME' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb/projects/yii2admin/backend/web/index.php'
+    'REMOTE_PORT' => '62618'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Flendvest%2Findex'
+    'REQUEST_URI' => '/projects/yii2admin/backend/web/index.php?r=admin%2Flendvest%2Findex'
+    'SCRIPT_NAME' => '/projects/yii2admin/backend/web/index.php'
+    'PHP_SELF' => '/projects/yii2admin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1469010823.49
+    'REQUEST_TIME' => 1469010823
+]
+2016-07-20 12:35:47 [127.0.0.1][1][cpidml7ffc4uq80bigijmq15f5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/lendvest/index".' in F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('admin/lendvest/...', Array)
+#1 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2016-07-20 12:35:47 [127.0.0.1][1][cpidml7ffc4uq80bigijmq15f5][info][application] $_GET = [
+    'r' => 'admin/lendvest/index'
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '7339192320'
+    'productHistory' => '5c09e6feb89904e2c52b46f190760f6affae33a76d6d3a5f9827d5a29ae440ces:2:\"13\";'
+    '_csrf' => '0fe8a6dc5c55bfc6087f861eff5f265fc818489f9f10642a897cfc1bcc7a4cd6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DrHr78S2tgxXBGuNf1K_p-mBvFQD4nQU\";}'
+    'YII_CSRF_TOKEN' => '28e5f4649aca3e3753c3e30ddfbafd5e45c22635s:40:\"f287095aa09f23552064d08d623eb9d4cabe4f65\";'
+    'PHPSESSID' => 'cpidml7ffc4uq80bigijmq15f5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/projects/yii2admin/backend/web/index.php'
+    '__id' => 1
+    'mp-translate' => 'zh_cn'
+    'Yii.CCaptchaAction.a8a5be2d.site.captcha' => '68-8='
+    'Yii.CCaptchaAction.a8a5be2d.site.captcharesult' => 60
+    'Yii.CCaptchaAction.a8a5be2d.site.captchacount' => 1
+]
+
+$_SERVER = [
+    'TMP' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/binaries/tmp'
+    'HTTP_HOST' => 'www.wsq.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.wsq.com/projects/yii2admin/backend/web/index.php?r=admin%2Flendvest%2Fadmin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => 'pgv_pvi=7339192320; productHistory=5c09e6feb89904e2c52b46f190760f6affae33a76d6d3a5f9827d5a29ae440ces%3A2%3A%2213%22%3B; _csrf=0fe8a6dc5c55bfc6087f861eff5f265fc818489f9f10642a897cfc1bcc7a4cd6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DrHr78S2tgxXBGuNf1K_p-mBvFQD4nQU%22%3B%7D; YII_CSRF_TOKEN=28e5f4649aca3e3753c3e30ddfbafd5e45c22635s%3A40%3A%22f287095aa09f23552064d08d623eb9d4cabe4f65%22%3B; PHPSESSID=cpidml7ffc4uq80bigijmq15f5'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\easyphp\\EasyPHP-DevServer-14.1VC11\\binaries\\php\\php_runningversion;D:\\php\\EasyPHP-DevServer-13.1VC9\\binaries\\php\\php_runningversion;C:\\Program Files\\Broadcom\\Broadcom 802.11 Network Adapter\\Driver;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\小乌龟\\bin;C:;HashiCorp\\Vagrant\\bin;D:\\Program Files\\Oracle\\VirtualBox;D:\\Program Files\\Java\\jdk1.7.0_75\\bin;C:\\ProgramData\\ComposerSetup\\bin;F:\\王松青\\git\\cmd;C:\\Users\\gaocailong\\AppData\\Roaming\\Composer\\vendor\\bin;.;;F:\\easyphp\\EASYPH~1.1VC\\Apache\\bin;F:\\easyphp\\EASYPH~1.1VC\\PHP;.;;.;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) PHP/5.5.8'
+    'SERVER_NAME' => 'www.wsq.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb'
+    'SERVER_ADMIN' => 'admin@127.0.0.1'
+    'SCRIPT_FILENAME' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb/projects/yii2admin/backend/web/index.php'
+    'REMOTE_PORT' => '62652'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Flendvest%2Findex'
+    'REQUEST_URI' => '/projects/yii2admin/backend/web/index.php?r=admin%2Flendvest%2Findex'
+    'SCRIPT_NAME' => '/projects/yii2admin/backend/web/index.php'
+    'PHP_SELF' => '/projects/yii2admin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1469010947.813
+    'REQUEST_TIME' => 1469010947
+]
+2016-07-20 12:40:27 [127.0.0.1][1][cpidml7ffc4uq80bigijmq15f5][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\grid\DataColumn::name' in F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Object.php:161
+Stack trace:
+#0 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Object->__set('name', 'identityNo')
+#1 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\grid\DataColumn), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\grid\DataCo...', Array, Array)
+#5 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\grid\DataCo...', Array, Array)
+#6 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\grid\GridView.php(531): yii\BaseYii::createObject(Array)
+#7 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\grid\GridView.php(275): yii\grid\GridView->initColumns()
+#8 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Object.php(107): yii\grid\GridView->init()
+#9 [internal function]: yii\base\Object->__construct(Array)
+#10 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#11 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\grid\GridVi...', Array, Array)
+#12 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\grid\GridVi...', Array, Array)
+#13 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#14 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\views\lender\index.php(129): yii\base\Widget::widget(Array)
+#15 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\View.php(325): require('F:\easyphp\Easy...')
+#16 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\easyphp\Easy...', Array)
+#17 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\easyphp\Easy...', Array, Object(backend\controllers\LenderController))
+#18 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(backend\controllers\LenderController))
+#19 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\controllers\LenderController.php(44): yii\base\Controller->render('index', Array)
+#20 [internal function]: backend\controllers\LenderController->actionIndex()
+#21 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#22 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#23 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#24 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('lender/index', Array)
+#25 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\web\index.php(19): yii\base\Application->run()
+#27 {main}
+2016-07-20 12:40:27 [127.0.0.1][1][cpidml7ffc4uq80bigijmq15f5][info][application] $_GET = [
+    'r' => 'lender/index'
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '7339192320'
+    'productHistory' => '5c09e6feb89904e2c52b46f190760f6affae33a76d6d3a5f9827d5a29ae440ces:2:\"13\";'
+    '_csrf' => '0fe8a6dc5c55bfc6087f861eff5f265fc818489f9f10642a897cfc1bcc7a4cd6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DrHr78S2tgxXBGuNf1K_p-mBvFQD4nQU\";}'
+    'YII_CSRF_TOKEN' => '28e5f4649aca3e3753c3e30ddfbafd5e45c22635s:40:\"f287095aa09f23552064d08d623eb9d4cabe4f65\";'
+    'PHPSESSID' => 'cpidml7ffc4uq80bigijmq15f5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/projects/yii2admin/backend/web/index.php'
+    '__id' => 1
+    'mp-translate' => 'zh_cn'
+    'Yii.CCaptchaAction.a8a5be2d.site.captcha' => '68-8='
+    'Yii.CCaptchaAction.a8a5be2d.site.captcharesult' => 60
+    'Yii.CCaptchaAction.a8a5be2d.site.captchacount' => 1
+]
+
+$_SERVER = [
+    'TMP' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/binaries/tmp'
+    'HTTP_HOST' => 'www.wsq.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.wsq.com/projects/yii2admin/backend/web/index.php?r=admin%2Flendvest%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => 'pgv_pvi=7339192320; productHistory=5c09e6feb89904e2c52b46f190760f6affae33a76d6d3a5f9827d5a29ae440ces%3A2%3A%2213%22%3B; _csrf=0fe8a6dc5c55bfc6087f861eff5f265fc818489f9f10642a897cfc1bcc7a4cd6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DrHr78S2tgxXBGuNf1K_p-mBvFQD4nQU%22%3B%7D; YII_CSRF_TOKEN=28e5f4649aca3e3753c3e30ddfbafd5e45c22635s%3A40%3A%22f287095aa09f23552064d08d623eb9d4cabe4f65%22%3B; PHPSESSID=cpidml7ffc4uq80bigijmq15f5'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\easyphp\\EasyPHP-DevServer-14.1VC11\\binaries\\php\\php_runningversion;D:\\php\\EasyPHP-DevServer-13.1VC9\\binaries\\php\\php_runningversion;C:\\Program Files\\Broadcom\\Broadcom 802.11 Network Adapter\\Driver;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\小乌龟\\bin;C:;HashiCorp\\Vagrant\\bin;D:\\Program Files\\Oracle\\VirtualBox;D:\\Program Files\\Java\\jdk1.7.0_75\\bin;C:\\ProgramData\\ComposerSetup\\bin;F:\\王松青\\git\\cmd;C:\\Users\\gaocailong\\AppData\\Roaming\\Composer\\vendor\\bin;.;;F:\\easyphp\\EASYPH~1.1VC\\Apache\\bin;F:\\easyphp\\EASYPH~1.1VC\\PHP;.;;.;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) PHP/5.5.8'
+    'SERVER_NAME' => 'www.wsq.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb'
+    'SERVER_ADMIN' => 'admin@127.0.0.1'
+    'SCRIPT_FILENAME' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb/projects/yii2admin/backend/web/index.php'
+    'REMOTE_PORT' => '62759'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=lender%2Findex'
+    'REQUEST_URI' => '/projects/yii2admin/backend/web/index.php?r=lender%2Findex'
+    'SCRIPT_NAME' => '/projects/yii2admin/backend/web/index.php'
+    'PHP_SELF' => '/projects/yii2admin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1469011227.026
+    'REQUEST_TIME' => 1469011227
+]
+2016-07-20 12:44:34 [127.0.0.1][1][cpidml7ffc4uq80bigijmq15f5][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Missing argument 2 for yii\BaseYii::t(), called in F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\models\Lender.php on line 146 and defined' in F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\BaseYii.php:498
+Stack trace:
+#0 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1497): app\models\Lender->attributeLabels()
+#1 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\grid\DataColumn.php(146): yii\db\BaseActiveRecord->getAttributeLabel(''userName'')
+#2 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\grid\DataColumn.php(121): yii\grid\DataColumn->getHeaderCellLabel()
+#3 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\grid\Column.php(83): yii\grid\DataColumn->renderHeaderCellContent()
+#4 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\grid\GridView.php(405): yii\grid\Column->renderHeaderCell()
+#5 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\grid\GridView.php(343): yii\grid\GridView->renderTableHeader()
+#6 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\widgets\BaseListView.php(151): yii\grid\GridView->renderItems()
+#7 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\grid\GridView.php(313): yii\widgets\BaseListView->renderSection(''{items}'')
+#8 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection(''{items}'')
+#9 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\widgets\BaseListView.php(129): yii\widgets\BaseListView->yii\widgets\{closure}('array (0 => '{i...')
+#10 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\widgets\BaseListView.php(129): ::preg_replace_callback(''/{\\w+}/'', 'class Closure {...', ''{items}\n     ...')
+#11 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\grid\GridView.php(288): yii\widgets\BaseListView->run()
+#12 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Widget.php(102): yii\grid\GridView->run()
+#13 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\views\lender\index.php(130): yii\base\Widget::widget('array ('dataPro...')
+#14 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#15 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile(''F:\\easyphp\\E...', 'array ('searchM...')
+#16 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile(''F:\\easyphp\\E...', 'array ('searchM...', 'class backend\c...')
+#17 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render(''index'', 'array ('searchM...', 'class backend\c...')
+#18 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\controllers\LenderController.php(44): yii\base\Controller->render(''index'', 'array ('searchM...')
+#19 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\LenderController->actionIndex()
+#20 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array('array (0 => cla...', 'array ()')
+#21 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('array ('r' => '...')
+#22 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction(''index'', 'array ('r' => '...')
+#23 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction(''lender/index'', 'array ('r' => '...')
+#24 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest('class yii\web\R...')
+#25 F:\easyphp\EasyPHP-DevServer-14.1VC11\data\localweb\projects\yii2admin\backend\web\index.php(19): yii\base\Application->run()
+#26 {main}
+2016-07-20 12:44:33 [127.0.0.1][1][cpidml7ffc4uq80bigijmq15f5][info][application] $_GET = [
+    'r' => 'lender/index'
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '7339192320'
+    'productHistory' => '5c09e6feb89904e2c52b46f190760f6affae33a76d6d3a5f9827d5a29ae440ces:2:\"13\";'
+    '_csrf' => '0fe8a6dc5c55bfc6087f861eff5f265fc818489f9f10642a897cfc1bcc7a4cd6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DrHr78S2tgxXBGuNf1K_p-mBvFQD4nQU\";}'
+    'YII_CSRF_TOKEN' => '28e5f4649aca3e3753c3e30ddfbafd5e45c22635s:40:\"f287095aa09f23552064d08d623eb9d4cabe4f65\";'
+    'PHPSESSID' => 'cpidml7ffc4uq80bigijmq15f5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/projects/yii2admin/backend/web/index.php'
+    '__id' => 1
+    'mp-translate' => 'zh_cn'
+    'Yii.CCaptchaAction.a8a5be2d.site.captcha' => '68-8='
+    'Yii.CCaptchaAction.a8a5be2d.site.captcharesult' => 60
+    'Yii.CCaptchaAction.a8a5be2d.site.captchacount' => 1
+]
+
+$_SERVER = [
+    'TMP' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/binaries/tmp'
+    'HTTP_HOST' => 'www.wsq.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.wsq.com/projects/yii2admin/backend/web/index.php?r=admin%2Flendvest%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => 'pgv_pvi=7339192320; productHistory=5c09e6feb89904e2c52b46f190760f6affae33a76d6d3a5f9827d5a29ae440ces%3A2%3A%2213%22%3B; _csrf=0fe8a6dc5c55bfc6087f861eff5f265fc818489f9f10642a897cfc1bcc7a4cd6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DrHr78S2tgxXBGuNf1K_p-mBvFQD4nQU%22%3B%7D; YII_CSRF_TOKEN=28e5f4649aca3e3753c3e30ddfbafd5e45c22635s%3A40%3A%22f287095aa09f23552064d08d623eb9d4cabe4f65%22%3B; PHPSESSID=cpidml7ffc4uq80bigijmq15f5'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\easyphp\\EasyPHP-DevServer-14.1VC11\\binaries\\php\\php_runningversion;D:\\php\\EasyPHP-DevServer-13.1VC9\\binaries\\php\\php_runningversion;C:\\Program Files\\Broadcom\\Broadcom 802.11 Network Adapter\\Driver;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\小乌龟\\bin;C:;HashiCorp\\Vagrant\\bin;D:\\Program Files\\Oracle\\VirtualBox;D:\\Program Files\\Java\\jdk1.7.0_75\\bin;C:\\ProgramData\\ComposerSetup\\bin;F:\\王松青\\git\\cmd;C:\\Users\\gaocailong\\AppData\\Roaming\\Composer\\vendor\\bin;.;;F:\\easyphp\\EASYPH~1.1VC\\Apache\\bin;F:\\easyphp\\EASYPH~1.1VC\\PHP;.;;.;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) PHP/5.5.8'
+    'SERVER_NAME' => 'www.wsq.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb'
+    'SERVER_ADMIN' => 'admin@127.0.0.1'
+    'SCRIPT_FILENAME' => 'F:/easyphp/EasyPHP-DevServer-14.1VC11/data/localweb/projects/yii2admin/backend/web/index.php'
+    'REMOTE_PORT' => '62850'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=lender%2Findex'
+    'REQUEST_URI' => '/projects/yii2admin/backend/web/index.php?r=lender%2Findex'
+    'SCRIPT_NAME' => '/projects/yii2admin/backend/web/index.php'
+    'PHP_SELF' => '/projects/yii2admin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1469011473.952
+    'REQUEST_TIME' => 1469011473
+]
