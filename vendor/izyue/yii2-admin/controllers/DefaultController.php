@@ -6,7 +6,7 @@ namespace izyue\admin\controllers;
  * DefaultController
  *
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
+ * @since 1.00
  */
 class DefaultController extends \yii\web\Controller
 {
