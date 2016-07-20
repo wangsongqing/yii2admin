@@ -130,7 +130,7 @@ class MenuHelper
         $key = [__METHOD__, $assigned, $root];
         $cache = null;
         if ($refresh || $callback !== null || $cache === null || (($result = $cache->get($key)) === false)) {
-        $assigned = self::notAssignment();//去除权限的访问限制，任何人可以访问所以的菜单
+            $assigned = self::notAssignment();//去除权限的访问限制，任何人可以访问所以的菜单
             $result = static::normalizeMenu($assigned, $menus, $callback, $root);
             if ($cache !== null && $callback === null) {
                 $cache->set($key, $result, $config->cacheDuration, new TagDependency([
