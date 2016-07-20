@@ -142,7 +142,7 @@ function initMenu($menuArray, $controllerName, $isSubUrl, $isShowIcon=false)
             <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
         </div>
         <!--logo start-->
-        <a href="<?=Url::home()?>" class="logo">IZ<span>YUE</span></a>
+        <a href="<?=Url::home()?>" class="logo">WANG<span>SQ</span></a>
         <!--logo end-->
         <div class="nav notify-row" id="top_menu">
             <!--  notification start -->
@@ -366,10 +366,10 @@ function initMenu($menuArray, $controllerName, $isSubUrl, $isShowIcon=false)
                     </a>
                     <ul class="dropdown-menu extended logout">
                         <div class="log-arrow-up"></div>
-                        <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                        <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                        <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li>
-                        <li><a href="<?=Url::toRoute('/site/logout')?>" data-method="post"><i class="fa fa-key"></i> Log Out</a></li>
+                        <li><a href="#"><i class=" fa fa-suitcase"></i>项 目</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> 设 置</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o"></i> 提 醒</a></li>
+                        <li><a href="<?=Url::toRoute('/site/logout')?>" data-method="post"><i class="fa fa-key"></i> 注 销</a></li>
                     </ul>
                 </li>
                 <li class="sb-toggle-right">
