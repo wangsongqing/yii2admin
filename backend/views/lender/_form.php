@@ -8,146 +8,198 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="lender-form">
+<!--<div class="lender-form">-->
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                <?= $this->title="更新客户信息" ?>
+            </header>
+            <div class="panel-body">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'userName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'englishName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'IDType')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'custSeqNo')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'birthday')->textInput() ?>
-
-    <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'fax')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'webSite')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'province')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'city')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'county')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'billAddress')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'billPostCode')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'customerStatus')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'intention')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'accountStatus')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'accountDate')->textInput() ?>
-
-    <?= $form->field($model, 'isDeleted')->textInput() ?>
-
-    <?= $form->field($model, 'identityNo')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'education')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'gender')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'duty')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'companyName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'customerMantainUser')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'customerAuth')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'comments')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'signContractDate')->textInput() ?>
-
-    <?= $form->field($model, 'contractNo')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'createTime')->textInput() ?>
-
-    <?= $form->field($model, 'createUser')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'updateTime')->textInput() ?>
-
-    <?= $form->field($model, 'updateUser')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'owner')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'lenderFrom')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'paymentType')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'transferedUser')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'transferedDate')->textInput() ?>
-
-    <?= $form->field($model, 'team')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'Source')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'Grade')->textInput() ?>
-
-    <?= $form->field($model, 'signContractAddress')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'customerManagerID')->textInput() ?>
-
-    <?= $form->field($model, 'customerManagerName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'teamManagerID')->textInput() ?>
-
-    <?= $form->field($model, 'teamManagerName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'operateManagerID')->textInput() ?>
-
-    <?= $form->field($model, 'operateManagerName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'yunYingManagerName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'yunYingManagerID')->textInput() ?>
-
-    <?= $form->field($model, 'subCompanyManagerID')->textInput() ?>
-
-    <?= $form->field($model, 'subCompanyManagerName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'subCompanyTeamBuildID')->textInput() ?>
-
-    <?= $form->field($model, 'subCompanyTeamBuildName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'VPID')->textInput() ?>
-
-    <?= $form->field($model, 'VPName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'yunYingManagerTeamBuildName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'yunYingManagerTeamBuildID')->textInput() ?>
-
-    <?= $form->field($model, 'nickName')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'sourceSuperMarketID')->textInput() ?>
-
-    <?= $form->field($model, 'arrangeWork')->textInput() ?>
-
-    <?= $form->field($model, 'SignDate')->textInput() ?>
-
-    <?= $form->field($model, 'ClaimAddress')->textInput() ?>
-
-    <?= $form->field($model, 'PayDate')->textInput() ?>
-
-    <?= $form->field($model, 'nationality')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'userName',[
+          'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+
+    <?= $form->field($model, 'englishName',[
+         'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+
+    <?= $form->field($model, 'IDType',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label','label'=>'身份类型'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->dropDownList(['身份证' => '身份证','军官证'=>'军官证']) ?>
+     
+    <?= $form->field($model, 'custSeqNo',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label','label'=>'投资类型'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+     
+     <?= $form->field($model, 'email',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>   
+                
+    <?= $form->field($model, 'phone',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?> 
+                
+    <?= $form->field($model, 'phone',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?> 
+                
+   <?= $form->field($model, 'birthday',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+                
+    <?= $form->field($model, 'tel',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+                
+    <?= $form->field($model, 'province',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+
+    <?= $form->field($model, 'city',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+
+    <?= $form->field($model, 'county',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+
+    <?= $form->field($model, 'billAddress',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label','label'=>'联系地址'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+
+    <?= $form->field($model, 'identityNo',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label','label'=>'身份证号码'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+
+    <?= $form->field($model, 'gender',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+
+
+    <?= $form->field($model, 'duty',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+
+    <?= $form->field($model, 'companyName',[
+        'labelOptions' => ['class'=>'col-lg-1 control-label'],
+                        'template' => '
+                            {label}
+                            <div class="col-lg-3">
+                            {input}
+                            {error}
+                            </div>',
+    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+         <div class="col-lg-offset-2 col-lg-10">
+        <?= Html::submitButton($model->isNewRecord ? '创建' : '更新', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        </div>
     </div>
-
+        
     <?php ActiveForm::end(); ?>
-
+                
+ </div>
+    <div style="margin-top: 100px;height:100px;"></div>
+        </section>
+    </div>
 </div>
