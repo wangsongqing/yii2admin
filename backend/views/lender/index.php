@@ -49,8 +49,8 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
                 </div>
             </div>',
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-//            'lenderID',
+//            ['class' => 'yii\grid\SerialColumn'],
+            'lenderID',
             'userName',
             'phone',
             'identityNo',
@@ -121,7 +121,7 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
             // 'ClaimAddress',
             // 'PayDate',
             // 'nationality',
-
+            
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
