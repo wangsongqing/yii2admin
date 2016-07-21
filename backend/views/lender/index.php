@@ -53,8 +53,16 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
             'lenderID',
             'userName',
             'phone',
-            'identityNo',
-            'gender',
+            [
+                'attribute'=>'identityNo',
+                'value'=>'identityNo',
+                'label'=>'身份证',
+            ],
+            [
+                'attribute'=>'gender',
+                'value'=>'gender',
+                'filter' => ['男'=>'男','女'=>'女'],
+            ],
 //            'englishName',
 //            'IDType',
 //            'custSeqNo',
@@ -122,7 +130,7 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
             // 'PayDate',
             // 'nationality',
             
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn','header'=>'操作'],
         ],
     ]); ?>
             </div>
