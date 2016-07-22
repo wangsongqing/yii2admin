@@ -103,6 +103,9 @@ class Lender extends \yii\db\ActiveRecord
             [['billPostCode', 'customerStatus', 'intention', 'accountStatus', 'gender'], 'string', 'max' => 10],
             [['comments'], 'string', 'max' => 500],
             [['lenderFrom', 'paymentType', 'nationality'], 'string', 'max' => 100],
+            [['userName','phone','identityNo'],'required'],
+            [['identityNo'],'match','pattern'=>'/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/','message'=>'身份证号码格式错误'],
+            [['phone'],'match','pattern'=>'/^1[3|4|5|8][0-9]\d{8}$/','message'=>'手机号格式码不正确'],
         ];
     }
 
@@ -133,7 +136,7 @@ class Lender extends \yii\db\ActiveRecord
             'accountStatus' => 'Account Status',
             'accountDate' => 'Account Date',
             'isDeleted' => 'Is Deleted',
-            'identityNo' => 'Identity No',
+            'identityNo' => '身份证号',
             'education' => 'Education',
             'gender' => '性别',
             'duty' => '职位',

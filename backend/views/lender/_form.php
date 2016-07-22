@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
                           'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight" style="height:68px;">
                                             {input}
                                             {error}
                                             </div>',
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label','label'=>'身份类型'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label','label'=>'投资类型'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -73,17 +73,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
-                                            {input}
-                                            {error}
-                                            </div>',
-                    ])->textInput(['maxlength' => true,'class' => 'form-control']) ?> 
-
-                    <?= $form->field($model, 'phone',[
-                        'labelOptions' => ['class'=>'col-lg-1 control-label'],
-                                        'template' => '
-                                            {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -93,7 +83,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -103,7 +93,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -113,7 +103,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -123,7 +113,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -133,7 +123,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -143,7 +133,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label','label'=>'联系地址'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -153,7 +143,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label','label'=>'身份证号码'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -163,7 +153,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -174,7 +164,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',
@@ -184,7 +174,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'labelOptions' => ['class'=>'col-lg-1 control-label'],
                                         'template' => '
                                             {label}
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 cloheight">
                                             {input}
                                             {error}
                                             </div>',

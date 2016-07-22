@@ -64,9 +64,13 @@ class LenderController extends Controller
     public function actionCreate()
     {
         $model = new Lender();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->lenderID]);
+        
+        if ($model->load(Yii::$app->request->post())) {
+            $model->createTime = date('Y-m-d H:i:s');//这里可以自定义一些特殊的属性
+            $model->createUser = Yii::$app->user->identity->username;
+            if($model->save()){
+                return $this->redirect(['view', 'id' => $model->lenderID]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -84,8 +88,10 @@ class LenderController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->lenderID]);
+        if ($model->load(Yii::$app->request->post())) {
+            if($model->save(false)){
+                return $this->redirect(['view', 'id' => $model->lenderID]);
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,

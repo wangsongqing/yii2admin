@@ -137,7 +137,8 @@ function initMenu($menuArray, $controllerName, $isSubUrl, $isShowIcon=false)
 
 <section id="container" >
     <!--header start-->
-    <header class="header white-bg">
+    <!-- select color 1.header green-bg 2.header purple-bg 3.header dark-bg  4.header blue-bg -->
+    <header class="header white-bg"> 
         <div class="sidebar-toggle-box">
             <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
         </div>
