@@ -368,7 +368,7 @@ function initMenu($menuArray, $controllerName, $isSubUrl, $isShowIcon=false)
                     <ul class="dropdown-menu extended logout">
                         <div class="log-arrow-up"></div>
                         <li><a href="#"><i class=" fa fa-suitcase"></i>项 目</a></li>
-                        <li><a href="#"><i class="fa fa-cog"></i> 设 置</a></li>
+                        <li><a href="<?php echo Yii::$app->urlManager->createUrl('admin/assignment/edituserpassword'); ?>"><i class="fa fa-cog"></i> 更改密码</a></li>
                         <li><a href="#"><i class="fa fa-bell-o"></i> 提 醒</a></li>
                         <li><a href="<?=Url::toRoute('/site/logout')?>" data-method="post"><i class="fa fa-key"></i> 注 销</a></li>
                     </ul>
