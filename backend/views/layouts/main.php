@@ -105,7 +105,7 @@ function initMenu($menuArray, $controllerName, $isSubUrl, $isShowIcon=false)
             echo '<li class="'.$class.'">';
         }
         $url = $url == '#' ? 'javascript:;' : Url::toRoute($url);
-        echo '<a href="'.$url.'"  class="'.$class.'">'.($isShowIcon ? '<i class="fa fa-sitemap"></i>' : '').'<span>'.$menuArray['label'].'</span></a>';
+        echo '<a href="'.$url.'"  class="'.$class.'">'.($isShowIcon ? '<i class="'.$menuArray["tubiao"].'"></i>' : '').'<span>'.$menuArray['label'].'</span></a>';
         //图标的样式 百度bootstrap fa会搜索出相应的图标添加到i标签
         if (isset($menuArray['items'])) {
             echo '<ul class="sub">';

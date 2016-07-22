@@ -56,7 +56,7 @@ class Menu extends \yii\db\ActiveRecord
             [['parent_name'], 'in',
                 'range' => static::find()->select(['name'])->column(),
                 'message' => 'Menu "{value}" not found.'],
-            [['parent', 'route', 'data', 'order'], 'default'],
+            [['parent', 'route', 'data', 'order','tubiao'], 'default'],
             [['order'], 'integer'],
             [['route'], 'in',
                 'range' => static::getSavedRoutes(),
@@ -99,6 +99,7 @@ class Menu extends \yii\db\ActiveRecord
             'route' => Yii::t('rbac-admin', 'Route'),
             'order' => Yii::t('rbac-admin', 'Order'),
             'data' => Yii::t('rbac-admin', 'Data'),
+            'tubiao'=>'图标CssClass',
         ];
     }
 

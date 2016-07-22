@@ -281,6 +281,7 @@ class MenuHelper
                         'id' => $menu['id'],
                         'order' => $menu['order'],
                         'label' => $menu['name'],
+                        'tubiao'=>$menu['tubiao'],
                         'url' => static::parseRoute($menu['route']),
                     ];
                     if ($menu['children'] != []) {
