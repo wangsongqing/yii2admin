@@ -271,6 +271,15 @@ class AssignmentController extends Controller
 
 
     }
+    
+    /**
+     * 用户修改密码
+     */
+    public function actionEdituserpassword(){
+        $model = $this->findModel(Yii::$app->user->id);
+        
+        return $this->render('edituserpassword',['model'=>$model]);
+    }
 
     /**
      * Deletes an existing Menu model.
