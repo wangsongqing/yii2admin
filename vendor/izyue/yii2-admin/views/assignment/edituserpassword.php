@@ -19,7 +19,7 @@ $this->title = '修改密码';
                 <div class="panel-body">
                     <?php $form = ActiveForm::begin(); ?>
 
-                                    <?= $form->field($model, 'username', [
+                                    <?= $form->field($model, 'oldPasswd', [
                     'labelOptions' => ['class'=>'col-lg-2 control-label'],
                     'template' => '
                             {label}
@@ -28,12 +28,12 @@ $this->title = '修改密码';
                             {error}
                             </div>
                             ',
-                ])->textInput([
+                ])->passwordInput([
                     'maxlength' => 64,
                     'class' => 'form-control',
                 ]) ?>
 
-                <?= $form->field($model, 'email', [
+                <?= $form->field($model, 'newPasswdOne', [
                     'labelOptions' => ['class'=>'col-lg-2 control-label'],
                     'template' => '
                             {label}
@@ -42,12 +42,11 @@ $this->title = '修改密码';
                             {error}
                             </div>
                             ',
-                ])->textInput([
-                    'type' => 'email',
+                ])->passwordInput([
                     'class' => 'form-control',
                 ]) ?>
 
-                <?= $form->field($model, 'password', [
+                <?= $form->field($model, 'newPasswdTwo', [
                     'labelOptions' => ['class'=>'col-lg-2 control-label'],
                     'template' => '
                             {label}
@@ -62,7 +61,7 @@ $this->title = '修改密码';
 
     <div class="form-group">
         <div class="col-lg-offset-2 col-lg-10" style="margin-left:430px;">
-        <?= Html::submitButton($model->isNewRecord ? '创建' : '更新', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton('修改', ['class' => 'btn btn-success']) ?>
         </div>
     </div>
         
