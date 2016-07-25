@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Lenders', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section class="wrapper site-min-height">
-    <div class="row" style="margin-top:-40px;">
+    <div class="row">
         <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
