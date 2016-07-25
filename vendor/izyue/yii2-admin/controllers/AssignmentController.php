@@ -3,6 +3,7 @@
 namespace izyue\admin\controllers;
 
 use backend\models\SignupForm;
+use backend\models\UserChangePasswd;
 use izyue\admin\components\MenuHelper;
 use Yii;
 use izyue\admin\models\searchs\Assignment as AssignmentSearch;
@@ -274,10 +275,25 @@ class AssignmentController extends Controller
     
     /**
      * 用户修改密码
+     *  if( \Yii::$app->getSession()->hasFlash('ad_create') ) {
+                echo \Yii::$app->getSession()->getFlash('ad_create');
+            }
+
      */
     public function actionEdituserpassword(){
-        $model = $this->findModel(Yii::$app->user->id);
-        
+        $model = new UserChangePasswd();
+         if($model->load(Yii::$app->request->post())){
+             if($model->validate()){
+                  $userModel = $this->findModel(Yii::$app->user->id);
+                  $userModel->setScenario('update');
+                  $userModel->setPassword($model->newPasswdOne);
+                  $userModel->generateAuthKey();
+                  if($userModel->save()){
+                      return $this->redirect(['index']);
+                      Yii::$app->end();
+                  }
+             }  
+         }
         return $this->render('edituserpassword',['model'=>$model]);
     }
 
