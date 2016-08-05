@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use app\models\Lender;
 use app\models\LenderSearch;
+use app\models\Lenderphone;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -66,11 +67,19 @@ class LenderController extends Controller
         $model = new Lender();
         
         if ($model->load(Yii::$app->request->post())) {
-            $model->createTime = date('Y-m-d H:i:s');//这里可以自定义一些特殊的属性
-            $model->createUser = Yii::$app->user->identity->username;
-            if($model->save()){
-                return $this->redirect(['view', 'id' => $model->lenderID]);
+            $transaction = Yii::$app->db->beginTransaction();//事物的使用
+            try{
+                $model->createTime = date('Y-m-d H:i:s');//这里可以自定义一些特殊的属性
+                $model->createUser = Yii::$app->user->identity->username;
+                if($model->save()){
+                    Lenderphone::addNewPhone($model);
+                    $transaction->commit();
+                    return $this->redirect(['view', 'id' => $model->lenderID]);
+                }
+            }catch (Exception $e){
+                $transaction->rollBack();
             }
+            
         } else {
             return $this->render('create', [
                 'model' => $model,
