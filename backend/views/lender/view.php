@@ -1,8 +1,11 @@
 <?php
 
 use yii\helpers\Html;
+use app\models\Lenderphone;
 use yii\widgets\DetailView;
+use yii\grid\GridView;
 use common\components\XDetailView; //命名空间规则引用类
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Lender */
@@ -106,6 +109,51 @@ $this->params['breadcrumbs'][] = $this->title;
             'nationality',
         ],
     ]) ?>
+                             <?php 
+ $query = new Lenderphone();
+ $dataProvider = $query->search($model,$model->lenderID);
+ echo GridView::widget([
+      'dataProvider' => $dataProvider,
+      'columns' => [
+          'phoneID',
+          'userName',
+          'phone',
+          [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{user-view} {user-update} {user-delete}',
+                'buttons' => [
+                    'user-view' => function ($url, $model, $key) {
+                        //$url = Yii::$app->urlManager->createUrl(['lender/view','id'=>$model->lenderID]);
+                        $options = [
+                          'title' => Yii::t('yii', 'View'),
+                          'aria-label' => Yii::t('yii', 'View'),
+                          'data-pjax' => '0',
+                        ];
+                        $phone = $model->phone;
+                        return Html::a('<span class="glyphicon" data-toggle="modal" data-target="#myModal" phone="'.$phone.'">查看</span>', 'javascript::', $options);
+                      },
+//                      'user-update' => function ($url, $model, $key) {
+//                        $url = Yii::$app->urlManager->createUrl(['lender/update','id'=>$model->lenderID]);
+//                        $options = [
+//                          'title' => Yii::t('yii', 'update'),
+//                          'aria-label' => Yii::t('yii', 'update'),
+//                          'data-pjax' => '0',
+//                        ];
+//                        return Html::a('<span class="glyphicon">编辑</span>', $url, $options);
+//                      },
+//                      'user-delete' => function ($url, $model, $key) {
+//                        $url = Yii::$app->urlManager->createUrl(['lender/delete','id'=>$model->lenderID]);
+//                        $options = [
+//                          'title' => Yii::t('yii', 'delete'),
+//                          'aria-label' => Yii::t('yii', 'delete'),
+//                          'data-pjax' => '0',
+//                        ];
+//                        return Html::a('<span class="glyphicon">删除</span>', $url, $options);
+//                      },
+                ],
+            ],
+      ],
+  ]) ?>
                         </div>
                     </div>
                 </div>
@@ -114,3 +162,36 @@ $this->params['breadcrumbs'][] = $this->title;
 
     </div>
 </section>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+               查看手机号码
+            </h4>
+         </div>
+         <div class="modal-body">
+             <h1 id="phone_is"></h1>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" 
+               data-dismiss="modal">关闭
+            </button>
+            <button type="button" class="btn btn-primary">
+               提交更改
+            </button>
+         </div>
+      </div><!-- /.modal-content -->
+</div><!-- /.modal -->
+<script>
+   $(".glyphicon").click(function(){
+       var phone = $(this).attr('phone');
+       $("#phone_is").html(phone);
+   });
+    </script>
