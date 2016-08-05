@@ -131,6 +131,7 @@ function initMenu($menuArray, $controllerName, $isSubUrl, $isShowIcon=false)
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <?=Html::jsFile('@web/statics/js/jquery.js')?>
 </head>
 <body>
 <?php $this->beginBody() ?>
