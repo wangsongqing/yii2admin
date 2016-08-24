@@ -39,7 +39,7 @@ class Log extends ActiveRecord
     public function rules()
     {
         return [
-            [['route', 'url', 'user_agent', 'admin_email', 'ip'], 'string', 'min' => 0, 'max' => 255],
+            [['route', 'url', 'user_agent', 'admin_email', 'ip','createTime','updateTime'], 'string', 'min' => 0, 'max' => 255],
             [['admin_id', 'route', 'url'], 'required'],
             [['admin_id'], 'integer', 'min' => 0, 'max' => 2147483647],
         ];
@@ -84,7 +84,8 @@ class Log extends ActiveRecord
         $model->admin_id = Yii::$app->user->identity['id'];
         $model->admin_email = Yii::$app->user->identity['email'];
         $model->ip = Yii::$app->request->userIP;
-
+        $model->createTime = date('Y-m-d H:i:s');
+        $model->updateTime = date('Y-m-d H:i:s');
         $model->save();
 
     }
@@ -102,6 +103,8 @@ class Log extends ActiveRecord
             'user_agent' => Yii::t('rbac-admin', 'User Agent'),
             'updated_at' => Yii::t('rbac-admin', 'Updated At'),
             'created_at' => Yii::t('rbac-admin', 'Created At'),
+            'createTime'=>'创建时间',
+            'updateTime'=>'更新时间',
         ];
     }
 
