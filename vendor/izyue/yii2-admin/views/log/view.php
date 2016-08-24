@@ -32,8 +32,14 @@ $this->params['breadcrumbs'][] = $this->title;
                                     'gets:ntext',
                                     'posts:ntext',
                                     'admin_email',
-                                    'updated_at',
-                                    'created_at',
+                                    [
+                                        'attribute'=>'updated_at',
+                                        'value'=>date('Y-m-d H:i:s',$model->updated_at),
+                                    ],
+                                    [
+                                       'attribute'=>'created_at',
+                                        'value'=>date('Y-m-d H:i:s',$model->created_at)
+                                    ]
                                 ],
                                 'template' => '<tr><th style="width:25%">{label}</th><td>{value}</td></tr>'
                             ]);
