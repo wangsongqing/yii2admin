@@ -132,15 +132,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         $phone = $model->phone;
                         return Html::a('<span class="glyphicon" data-toggle="modal" data-target="#myModal" phone="'.$phone.'">查看</span>', 'javascript::', $options);
                       },
-//                      'user-update' => function ($url, $model, $key) {
+                      'user-update' => function ($url, $model, $key) {
 //                        $url = Yii::$app->urlManager->createUrl(['lender/update','id'=>$model->lenderID]);
-//                        $options = [
-//                          'title' => Yii::t('yii', 'update'),
-//                          'aria-label' => Yii::t('yii', 'update'),
-//                          'data-pjax' => '0',
-//                        ];
-//                        return Html::a('<span class="glyphicon">编辑</span>', $url, $options);
-//                      },
+                          $url = 'javascript::';
+                        $options = [
+                          'title' => Yii::t('yii', 'update'),
+                          'aria-label' => Yii::t('yii', 'update'),
+                          'data-pjax' => '0',
+                        ];
+                        return Html::a('<span class="glyphiconedit" phone="'.$model->phone.'" phoneID="'.$model->phoneID.'" data-toggle="modal" data-target="#myModaledit">编辑</span>', $url, $options);
+                      },
 //                      'user-delete' => function ($url, $model, $key) {
 //                        $url = Yii::$app->urlManager->createUrl(['lender/delete','id'=>$model->lenderID]);
 //                        $options = [
@@ -161,8 +162,8 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
     </div>
-</section>
-
+    </section>
+<!--///////////////////////查看modal////////////////////////////-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
    aria-labelledby="myModalLabel" aria-hidden="true">
    <div class="modal-dialog">
@@ -183,15 +184,60 @@ $this->params['breadcrumbs'][] = $this->title;
             <button type="button" class="btn btn-default" 
                data-dismiss="modal">关闭
             </button>
+<!--            <button type="button" class="btn btn-primary">
+               提交更改
+            </button>-->
+         </div>
+      </div><!-- /.modal-content -->
+</div><!-- /.modal -->
+</div>
+<!--///////////////////////查看modal////////////////////////////-->
+
+<!--///////////////////////编辑modal////////////////////////////-->
+<div class="modal fade" id="myModaledit" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+               编辑手机号码
+            </h4>
+         </div>
+         <div class="modal-body">
+            <form class="bs-example bs-example-form" role="form" action="" name="phone">
+            <div class="input-group">
+            <span class="input-group-addon">手机号码</span>
+            <input type="text" class="form-control" id="phonename" placeholder="请输入手机号码">
+            </div>
+            <input type="hidden" name="phoneID" value="" id="hiddenPhoneID">
+            </form>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" 
+               data-dismiss="modal">关闭
+            </button>
             <button type="button" class="btn btn-primary">
                提交更改
             </button>
          </div>
       </div><!-- /.modal-content -->
 </div><!-- /.modal -->
+</div>
+<!--///////////////////////编辑modal////////////////////////////-->
 <script>
    $(".glyphicon").click(function(){
        var phone = $(this).attr('phone');
        $("#phone_is").html(phone);
+   });
+   
+   $(".glyphiconedit").click(function(){
+       var phoneID = $(this).attr('phoneID');
+       var phone = $(this).attr('phone');
+       $("#phonename").val(phone);
+       $("#hiddenPhoneID").val(phoneID);
    });
     </script>
