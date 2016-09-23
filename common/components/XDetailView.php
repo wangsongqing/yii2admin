@@ -54,7 +54,7 @@ class XDetailView extends DetailView{
                if(!empty($_arrNum) && $_arrNum>0){
                     for($_arrNum;$_arrNum>=1;$_arrNum--){
                         $_NumOffset = $_Num - $_arrNum;
-                        $this->template .= "<th>{$attribute[$_NumOffset]['label']}</th><td>{$this->formatter->format($attribute[$_NumOffset]['value'], $attribute[$_NumOffset]['format'])}</td>";
+                        $this->template .= "<th>{$attribute[$_NumOffset]['label']}</th><td>{$this->returnEmptyString($this->formatter->format($attribute[$_NumOffset]['value'], $attribute[$_NumOffset]['format']))}</td>";
                     }
                 }
                 $this->template .= '</tr>';
@@ -62,6 +62,20 @@ class XDetailView extends DetailView{
             }
         } else {
             return call_user_func($this->template, $attribute, $index, $this);
+        }
+    }
+    
+    /**
+     * if columns is null return '';
+     * @param type $param
+     * @return string
+     * 刚开始做判断的时候是用if($param == '(未设置)'){}做判断一直不行，打印出来也是“(未设置)”，一番折腾查看Formatter.php($nullDisplay属性)文件源码才明白
+     */
+    protected function returnEmptyString($param){
+        if($param == '<span class="not-set">(未设置)</span>'){
+            return '';
+        }else{
+            return $param;
         }
     }
 }
