@@ -48,6 +48,7 @@ class LendinvestmentSearch extends Lendinvestment
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => ['pageSize' => 10], //设置每个页面显示几条数据
         ]);
 
         $this->load($params);
