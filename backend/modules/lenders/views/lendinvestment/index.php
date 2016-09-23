@@ -18,6 +18,9 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
         <header class="panel-heading">
             <?=$this->title?>
         </header>
+        <?= $this->render('_search', [
+        'model' => $searchModel,
+    ]) ?>
         <div class="panel-body">
             <div class="adv-table editable-table ">
                 <div class="clearfix">
@@ -49,13 +52,18 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
 //            ['class' => 'yii\grid\SerialColumn'],
 
 //            'lendInvestID',
+            [
+                'attribute'=>'lendInvestID',
+                'value'=>'lendInvestID',
+                'label'=>'投资ID',
+            ],
 //            'lenderID',
 //            'lendInvestNo',
 //            'lendType',
 //            'applyInvestDate',
              'expireDate',
              'investAmt',
-             'surplusAmt',
+//             'surplusAmt',
             // 'toinvestDate',
              'investRate',
             // 'recycleType',
@@ -75,7 +83,7 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
             // 'comments',
             // 'payBankID',
             // 'receiveBankID',
-            // 'contractNo',
+             'contractNo',
             // 'lenderNo',
             // 'seqNo',
             // 'transferBankName',
