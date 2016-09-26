@@ -250,7 +250,21 @@ class GridView extends BaseListView
      * - `{sorter}`: the sorter. See [[renderSorter()]].
      * - `{pager}`: the pager. See [[renderPager()]].
      */
-    public $layout = "{summary}\n{items}\n{pager}";
+//    public $layout = "{summary}\n{items}\n{pager}";
+    /**
+     *控制分页显示的位置和（第1-10条，共29条数据）的显示位置
+     * @var string 
+     */
+    public $layout = '{items}
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="dataTables_info" id="editable-sample_info">{summary}</div>
+            </div>
+            <div class="col-lg-6">
+                <div class="dataTables_paginate paging_bootstrap pagination">{pager}</div>
+            </div>
+        </div>';
+
 
 
     /**
@@ -300,7 +314,7 @@ class GridView extends BaseListView
             return '';
         }
     }
-
+    
     /**
      * @inheritdoc
      */
