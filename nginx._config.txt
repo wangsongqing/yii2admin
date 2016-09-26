@@ -1,0 +1,24 @@
+一级域名访问(这样就可以用www.wsq.com直接访问首页了)：
+nginx的配置：
+root  /www/yii2admin/backend/web/;
+
+不显示index.php的配置：
+location / {
+if (!-e $request_filename) {
+    	###一级目录下
+   		rewrite ^(.*)$ /index.php/$1 last;break;
+	}
+}
+
+
+二级域名访问：
+nginx的配置(这样就可以用www.wsq.com/yii2admin/backend/web)：
+root  /www/;
+
+不显示index.php的配置：
+location / {
+	if (!-e $request_filename) {
+	    ###域名下的二级目录
+		rewrite ^/yii2admin/backend/web/(.*)$ /yii2admin/backend/web/index.php/$1 last;
+	}
+}
