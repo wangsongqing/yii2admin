@@ -39,15 +39,6 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
             'prevPageLabel' => '上一页',
             'nextPageLabel' => '下一页',
         ],
-        'layout'=> '{items}
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="dataTables_info" id="editable-sample_info">{summary}</div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="dataTables_paginate paging_bootstrap pagination">{pager}</div>
-                </div>
-            </div>',
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
             'lenderID',
