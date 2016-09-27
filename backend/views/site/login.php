@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]
 ]); ?>
 
-<a class="logo floatless" href="/">IZ<span>YUE</span>管理系统</a>
+<a class="logo floatless" href="/">W<span>SQ</span>管理系统</a>
 <div class="login-wrap">
 
     <?= $form->field($model, 'username',[
