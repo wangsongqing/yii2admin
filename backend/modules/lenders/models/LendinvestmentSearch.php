@@ -45,7 +45,8 @@ class LendinvestmentSearch extends Lendinvestment
         $query = Lendinvestment::find();
 
         // add conditions that should always apply here
-
+//        $query->where(['investRate'=>'12','investAmt'=>'5']); //添加查询条件
+        
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => ['pageSize' => 10], //设置每个页面显示几条数据
