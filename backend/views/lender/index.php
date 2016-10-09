@@ -43,7 +43,14 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
 //            ['class' => 'yii\grid\SerialColumn'],
             'lenderID',
             'userName',
-            'phone',
+//            'phone',
+            [
+                'label' => "手机",
+                'filter' => Html::activeTextInput($searchModel, 'phone', ['class' => 'form-control']),
+                'value' => function ($model) {
+                    return $model->phone;
+                },
+            ],
             [
                 'attribute'=>'identityNo',
                 'value'=>'identityNo',
