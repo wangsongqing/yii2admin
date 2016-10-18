@@ -27,6 +27,9 @@ return [
         'lenders'=>[
             'class'=>'app\modules\lenders\Module',
         ],
+        'redistest'=>[
+             'class'=>'app\modules\redistest\Module',
+        ],
     ],
     'components' => [
         'user' => [
