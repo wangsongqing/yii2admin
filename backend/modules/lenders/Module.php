@@ -22,8 +22,5 @@ class Module extends \yii\base\Module
 
         // custom initialization code goes here
         // it must login.if not login redirect login.php
-        if (Yii::$app->user->isGuest){
-            return Yii::$app->response->redirect(Yii::$app->homeUrl);
-        }
     }
 }
