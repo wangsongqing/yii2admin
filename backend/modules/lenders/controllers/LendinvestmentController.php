@@ -8,11 +8,12 @@ use app\modules\lenders\models\LendinvestmentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\components\BeController;
 
 /**
  * LendinvestmentController implements the CRUD actions for Lendinvestment model.
  */
-class LendinvestmentController extends Controller
+class LendinvestmentController extends BeController
 {
     /**
      * @inheritdoc
