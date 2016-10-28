@@ -9,11 +9,12 @@ use app\models\Lenderphone;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\components\BeController;
 
 /**
  * LenderController implements the CRUD actions for Lender model.
  */
-class LenderController extends Controller
+class LenderController extends BeController
 {
     /**
      * @inheritdoc
