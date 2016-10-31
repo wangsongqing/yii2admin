@@ -40,7 +40,7 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
             'nextPageLabel' => '下一页',
         ],
         'columns' => [
-//            ['class' => 'yii\grid\SerialColumn'],
+//            ['class' => 'yii\grid\CheckboxColumn'],//多选
             'lenderID',
             'userName',
 //            'phone',
