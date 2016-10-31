@@ -30,7 +30,7 @@ use yii\widgets\ActiveForm;
 
 <?php foreach ($generator->getColumnNames() as $attribute) {
     if (in_array($attribute, $safeAttributes)) {
-        echo "    <?= " . $generator->generateActiveField($attribute) . " ?>\n\n";
+        echo "    <div class='col-sm-4'>\n        <?= " . $generator->generateActiveField($attribute) . " ?>\n    </div>\n\n";
     }
 } ?>
     <div class="form-group">
