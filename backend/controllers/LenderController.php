@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 use common\components\BeController;
 
 /**
- * LenderController implements the CRUD actions for Lender model.
+ * LenderController implements the CRUD actions for Lender model .
  */
 class LenderController extends BeController
 {
