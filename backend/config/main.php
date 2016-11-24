@@ -94,6 +94,31 @@ return [
                 'help/<id:\d+>/<surname:\w+>' => 'cms/default/page',
             ],
         ],
+        /**
+         * mail 配置和用法
+         * $mail= Yii::$app->mailer->compose();   
+         * $mail->setTo('*****@qq.com');  给谁发
+         * $mail->setSubject("邮件测试");  邮件标题
+         * $mail->setTextBody('zheshisha ');   //发布纯文字文本
+         * $mail->setHtmlBody("<h1>问我我我我我</h1>");    //发布可以带html标签的文本
+         * $mail->send()
+         */
+        'mailer' => [  
+                'class' => 'yii\swiftmailer\Mailer',  
+                 'useFileTransport' =>false,//这句一定有，false发送邮件，true只是生成邮件在runtime文件夹下，不发邮件
+                'transport' => [  
+                    'class' => 'Swift_SmtpTransport',  
+                    'host' => 'smtp.163.com',  //每种邮箱的host配置不一样
+                    'username' => 'wangsongqingwork@163.com',  
+                    'password' => 'baba521',  
+                    'port' => '25',  
+                    'encryption' => 'tls',
+                ],   
+                'messageConfig'=>[  
+                    'charset'=>'UTF-8',  
+                    'from'=>['wangsongqingwork@163.com'=>'admin']  
+                    ],  
+            ],  
         
     ],
 //    'as access' => [
