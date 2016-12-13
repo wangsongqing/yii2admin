@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\models\Combox;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -50,6 +51,12 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
                 'value' => function ($model) {
                     return $model->phone;
                 },
+            ],
+            [
+                'attribute'=>'IDType',
+                'value'=>function($model){
+                    return Combox::returnChinesesType('证件类型',$model->IDType);
+                }
             ],
             [
                 'attribute'=>'identityNo',
