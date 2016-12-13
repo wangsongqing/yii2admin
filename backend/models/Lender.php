@@ -118,7 +118,7 @@ class Lender extends \yii\db\ActiveRecord
             'lenderID' => '客户ID',
             'userName' => '客户名',
             'englishName' => '英语名字',
-            'IDType' => 'Idtype',
+            'IDType' => '证件类型',
             'custSeqNo' => 'Cust Seq No',
             'email' => '邮件',
             'phone' => '手机',
