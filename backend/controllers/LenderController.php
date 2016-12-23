@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use mPDF;
 use app\models\Lender;
 use app\models\LenderSearch;
 use app\models\Lenderphone;
@@ -120,6 +121,16 @@ class LenderController extends BeController
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+    
+    /**
+     * 创建PDF
+     */
+    public function actionPdf(){
+        $model = new mPDF();
+        $mpdf->WriteHTML('Sample Text');
+        $mpdf->Output();
+        exit;
     }
 
     /**
