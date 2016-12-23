@@ -13,10 +13,14 @@
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.6",
         "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*",
+        "yiisoft/yii2-swiftmailer": "^2.0",
         "izyue/yii2-admin": "*",
         "yiidoc/yii2-redactor": "*",
-        "yiisoft/yii2-imagine": "*"
+        "yiisoft/yii2-imagine": "*",
+        "kartik-v/yii2-widget-datepicker": "@dev",
+        "raoul2000/yii2-workflow-view": "*",
+        "yiisoft/yii2-redis": "^2.0",
+        "mpdf/mpdf":"*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
