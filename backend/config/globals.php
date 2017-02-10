@@ -11,6 +11,20 @@ function dump($id){
 	exit;
 }
 
+/**
+ * 把对象转成需要的数组
+ * @param object $obj
+ * @param array $arr ['itemValue','itemName']
+ * @return array
+ */
+function objToArray($obj,$arr=array()){
+    $_arr = [];
+    foreach($obj as $item){
+         $_arr[$item->$arr[0]] = $item->$arr[1];
+    }
+    return $_arr;
+}
+
 
 
 
