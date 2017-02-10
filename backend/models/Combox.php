@@ -56,5 +56,13 @@ class Combox extends \yii\db\ActiveRecord
         }
     }
     
+    public static function comboxNameBack($comboxName=''){
+        $model = self::find()->where(['comboxName'=>$comboxName])->all();
+        if(!empty($model)){
+            $_arr = objToArray($model,['itemValue','itemName']);
+            return $_arr;
+        }
+    }
+    
     
 }
