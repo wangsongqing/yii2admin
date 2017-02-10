@@ -7,55 +7,33 @@ use yii\grid\GridView;
 /* @var $searchModel app\modules\lenders\models\LendinvestmentSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = '投资管理';
+$this->title = 'Lendinvestments';
 $this->params['breadcrumbs'][] = $this->title;
-$this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['depends'=>'backend\assets\AppAsset']);
-
 ?>
-<section class="wrapper site-min-height">
-    <!-- page start-->
-    <section class="panel">
-        <header class="panel-heading">
-            <?=$this->title?>
-        </header>
-        <?= $this->render('_search', [
-        'model' => $searchModel,
-    ]) ?>
-        <div class="panel-body">
-            <div class="adv-table editable-table ">
-                <div class="clearfix">
-                    
-                </div>
-                <div class="space15"></div>
+<div class="lendinvestment-index">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?= Html::a('Create Lendinvestment', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'tableOptions' => [
-            'class' => 'table table-striped table-hover table-bordered',
-            'id' => 'editable-sample',
-        ],
-        'pager' => [
-            'prevPageLabel' => '上一页',
-            'nextPageLabel' => '下一页',
-        ],
         'columns' => [
-//            ['class' => 'yii\grid\SerialColumn'],
+            ['class' => 'yii\grid\SerialColumn'],
 
-//            'lendInvestID',
-            [
-                'attribute'=>'lendInvestID',
-                'value'=>'lendInvestID',
-                'label'=>'投资ID',
-            ],
-//            'lenderID',
-//            'lendInvestNo',
-//            'lendType',
-//            'applyInvestDate',
-             'expireDate',
-             'investAmt',
-//             'surplusAmt',
+            'lendInvestID',
+            'lenderID',
+            'lendInvestNo',
+            'lendType',
+            'applyInvestDate',
+            // 'expireDate',
+            // 'investAmt',
+            // 'surplusAmt',
             // 'toinvestDate',
-             'investRate',
+            // 'investRate',
             // 'recycleType',
             // 'investStatus',
             // 'paymentType',
@@ -73,7 +51,7 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
             // 'comments',
             // 'payBankID',
             // 'receiveBankID',
-             'contractNo',
+            // 'contractNo',
             // 'lenderNo',
             // 'seqNo',
             // 'transferBankName',
@@ -141,26 +119,7 @@ $this->registerCssFile('@web/statics/assets/data-tables/DT_bootstrap.css', ['dep
             // 'investType',
             // 'recycleDesc',
 
-            [
-                'class' => 'yii\grid\ActionColumn',
-                'template' => '{view} {update}{delete}',
-//                'buttons'=>[
-//                    //自定义审核按钮 {audit}
-//                    'audit'=>function($url, $model, $key){
-//                    $options = [
-//                        'title' => '审批',
-//                        'aria-label' => '审批',
-//                        'data-pjax' => '0',
-//                    ];
-////                        return Html::a('<span class="glyphicon glyphicon-user"></span>', $url, $options);图标
-//                        return Html::a('<span class="glyphicon">审批</span>', $url, $options);//字体样式
-//                    }
-//                ],
-            ],
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 </div>
-        </div>
-    </section>
-    <!-- page end-->
-</section>

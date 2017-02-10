@@ -15,42 +15,15 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    
-    <?= $form->field($model, 'lendInvestID',[
-        'labelOptions' => ['class'=>'col-lg-1 control-label','label'=>'投资ID'],
-                      'template' => '
-                          {label}
-                          <div class="col-lg-3 cloheight" style="height:68px;">
-                          {input}
-                          {error}
-                          </div>',
-  ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+    <?= $form->field($model, 'lendInvestID') ?>
 
-    <?= $form->field($model, 'contractNo',[
-        'labelOptions' => ['class'=>'col-lg-1 control-label'],
-                      'template' => '
-                          {label}
-                          <div class="col-lg-3 cloheight" style="height:68px;">
-                          {input}
-                          {error}
-                          </div>',
-  ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
-    
-    <?= $form->field($model, 'expireDate',[
-           'labelOptions' => ['class'=>'col-lg-1 control-label'],
-                         'template' => '
-                             {label}
-                             <div class="col-lg-3 cloheight" style="height:68px;">
-                             {input}
-                             {error}
-                             </div>',
-     ])->textInput(['maxlength' => true,'class' => 'form-control']) ?>
+    <?= $form->field($model, 'lenderID') ?>
 
-    <?php //$form->field($model, 'lendInvestNo') ?>
+    <?= $form->field($model, 'lendInvestNo') ?>
 
-    <?php //$form->field($model, 'lendType') ?>
+    <?= $form->field($model, 'lendType') ?>
 
-    <?php //$form->field($model, 'applyInvestDate') ?>
+    <?= $form->field($model, 'applyInvestDate') ?>
 
     <?php // echo $form->field($model, 'expireDate') ?>
 
@@ -229,17 +202,12 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'investType') ?>
 
     <?php // echo $form->field($model, 'recycleDesc') ?>
-    <br/><br/><br/><br/>
+
     <div class="form-group">
-        <?= Html::submitButton('搜索', ['class' => 'btn btn-primary','style'=>'margin-left:20px;']) ?>
-        <?= Html::resetButton('返回', ['class' => 'btn btn-default','id'=>'ResetClick']) ?>
+        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
-    
+
 </div>
-<script>
-    $("#ResetClick").click(function(){
-        location.href=history.go(-1);
-    });
-</script>

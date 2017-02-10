@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use app\models\Lenderphone;
+use app\modules\lenders\models\Lenderphone;
 use yii\widgets\DetailView;
 use yii\grid\GridView;
 use common\components\XDetailView; //命名空间规则引用类
