@@ -6,11 +6,11 @@ use Yii;
 use mPDF;
 use app\models\Lender;
 use app\models\LenderSearch;
-use app\models\Lenderphone;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\components\BeController;
+use app\modules\lenders\models\Lenderphone;
 
 /**
  * LenderController implements the CRUD actions for Lender model .
