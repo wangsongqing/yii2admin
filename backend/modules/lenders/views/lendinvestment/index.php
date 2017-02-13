@@ -51,7 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                'label' => "投资人",
                 'filter' => Html::activeTextInput($searchModel, 'lenderID', ['class' => 'form-control']),
-                //'filter' => true, //不显示搜索框
+//                'filter' => false, //不显示搜索框
                 "visible" => true,//是否显示某列案例
                 "headerOptions" => ["width" => "100"],//设定宽度等
                 'value' => function ($model) {
