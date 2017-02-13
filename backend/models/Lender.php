@@ -184,4 +184,12 @@ class Lender extends \yii\db\ActiveRecord
             'nationality' => 'Nationality',
         ];
     }
+    
+    public static function returnLenderName($lender=''){
+        if(!empty($lender)){
+//            $model = self::find()->where(['lenderID'=>$lender])->one();
+            $model = self::findOne($lender);
+            return $model->userName;
+        }
+    } 
 }

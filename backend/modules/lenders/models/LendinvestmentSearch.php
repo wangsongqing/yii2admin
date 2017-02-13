@@ -6,7 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\modules\lenders\models\Lendinvestment;
-
+use app\models\Lender;
 /**
  * LendinvestmentSearch represents the model behind the search form about `app\models\Lendinvestment`.
  */
@@ -46,6 +46,10 @@ class LendinvestmentSearch extends Lendinvestment
 
         // add conditions that should always apply here
 //        $query->where(['investRate'=>'12','investAmt'=>'5']); //添加查询条件
+        if(isset($_GET['LendinvestmentSearch']) && !empty($_GET['LendinvestmentSearch']['lenderID'])){
+            $lenderModel = Lender::find()->where(['userName'=>$_GET['LendinvestmentSearch']['lenderID']])->one();
+            $query->where(['lenderID'=>$lenderModel->lenderID]);
+        }
         
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

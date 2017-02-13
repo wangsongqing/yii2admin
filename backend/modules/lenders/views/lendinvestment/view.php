@@ -1,35 +1,42 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
+use common\components\XDetailView; //命名空间规则引用类
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\lenders\models\Lendinvestment */
+/* @var $model app\models\Lendinvestment */
 
-$this->title = $model->lendInvestID;
+$this->title = '查看投资详情 '.'投资ID:'.$model->lendInvestID;
 $this->params['breadcrumbs'][] = ['label' => 'Lendinvestments', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="lendinvestment-view">
+    <section class="wrapper site-min-height">
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <?=$this->title?>
+                </header>
+                <div class="panel-body">
+                     <p>
+                        <?= Html::a('修 改', ['update', 'id' => $model->lenderID], ['class' => 'btn btn-primary']) ?>
+                        <?= Html::a('删 除', ['delete', 'id' => $model->lenderID], [
+                            'class' => 'btn btn-danger',
+                            'data' => [
+                                'confirm' => 'Are you sure you want to delete this item?',
+                                'method' => 'post',
+                            ],
+                        ]) ?>
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-11">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Update', ['update', 'id' => $model->lendInvestID], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->lendInvestID], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
-
-    <?= DetailView::widget([
+    <?= XDetailView::widget([
         'model' => $model,
+        'ItemColumns'=>3,//每行显示几条数据
         'attributes' => [
-            'lendInvestID',
-            'lenderID',
+//            'lendInvestID',
+//            'lenderID',
             'lendInvestNo',
             'lendType',
             'applyInvestDate',
@@ -124,5 +131,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'recycleDesc',
         ],
     ]) ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-</div>
+    </div>
+    </section>
