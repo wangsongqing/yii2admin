@@ -77,4 +77,11 @@ class Lenderphone extends \yii\db\ActiveRecord
         $model->phone = $phoneModel->phone;
         $model->save();
     }
+    
+    public static function returnPhone($phoneID=''){
+        if(!empty($phoneID)){
+            $model = self::findOne($phoneID);
+            return $model->phone;
+        }
+    }
 }

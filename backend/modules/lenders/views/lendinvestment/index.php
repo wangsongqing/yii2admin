@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use app\models\Lender;
+use app\modules\lenders\models\Lenderphone;
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\lenders\models\LendinvestmentSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -41,12 +42,12 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
-
 //            'lendInvestID',
             [
                 'attribute'=>'lendInvestID',
                 'value'=>'lendInvestID',
                 'label'=>'投资ID',
+                "headerOptions" => ["width" => "50"],//设定宽度等
             ],
             [
                'label' => "投资人",
@@ -55,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 "visible" => true,//是否显示某列案例
                 "headerOptions" => ["width" => "100"],//设定宽度等
                 'value' => function ($model) {
-                    return Lender::returnLenderName($model->lenderID);//根据phoneID去phone表里面查询电话号码
+                    return Lender::returnLenderName($model->lenderID);//根据lenderID去lenderID表里面查询投资人的姓名
                 },
             ],
 //            'lendInvestNo',
@@ -134,7 +135,17 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'oralContractNo',
             // 'renewContractNo',
             // 'addressID',
-            // 'phoneID',
+//             'phoneID',
+            [
+                'label' => "手机号",
+                'filter' => Html::activeTextInput($searchModel, 'phoneID', ['class' => 'form-control']),
+                //'filter' => false, //不显示搜索框
+                "visible" =>true,//是否显示某列案例
+//                "headerOptions" => ["width" => "100"],//设定宽度等
+                'value' => function ($model) {
+                    return Lenderphone::returnPhone($model->phoneID);//根据phoneID去phone表里面查询电话号码
+                },
+            ],
             // 'renewDate',
             // 'jixiaoDate',
             // 'postType',

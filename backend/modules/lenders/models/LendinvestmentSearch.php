@@ -7,6 +7,7 @@ use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\modules\lenders\models\Lendinvestment;
 use app\models\Lender;
+use app\modules\lenders\models\Lenderphone;
 /**
  * LendinvestmentSearch represents the model behind the search form about `app\models\Lendinvestment`.
  */
@@ -46,18 +47,24 @@ class LendinvestmentSearch extends Lendinvestment
 
         // add conditions that should always apply here
 //        $query->where(['investRate'=>'12','investAmt'=>'5']); //添加查询条件
-        if(isset($_GET['LendinvestmentSearch']) && !empty($_GET['LendinvestmentSearch']['lenderID'])){
-            $lenderModel = Lender::find()->where(['userName'=>$_GET['LendinvestmentSearch']['lenderID']])->one();
-            $query->where(['lenderID'=>$lenderModel->lenderID]);
+        if(isset($_GET['LendinvestmentSearch'])){
+            if(!empty(Yii::$app->request->get('LendinvestmentSearch')['lenderID'])){
+                $lenderModel = Lender::find()->where(['userName'=>Yii::$app->request->get('LendinvestmentSearch')['lenderID']])->one();
+                $query->andFilterWhere(['lenderID'=>$lenderModel->lenderID]);
+            }
+            if(!empty(Yii::$app->request->get('LendinvestmentSearch')['phoneID'])){
+                $phoneModel = Lenderphone::find()->where(['phone'=>Yii::$app->request->get('LendinvestmentSearch')['phoneID']])->one();
+                $query->andFilterWhere(['phoneID'=>$phoneModel->phoneID]);
+            }
         }
         
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => ['pageSize' => 10], //设置每个页面显示几条数据
         ]);
-
+        
         $this->load($params);
-
+        
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
@@ -112,7 +119,7 @@ class LendinvestmentSearch extends Lendinvestment
             'companyID' => $this->companyID,
             'deptID' => $this->deptID,
             'addressID' => $this->addressID,
-            'phoneID' => $this->phoneID,
+//            'phoneID' => $this->phoneID,
             'renewDate' => $this->renewDate,
             'jixiaoDate' => $this->jixiaoDate,
             'sourceSuperMarketID' => $this->sourceSuperMarketID,
